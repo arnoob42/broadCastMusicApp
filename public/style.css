@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: #1e1e1e; /* Dark background */
+}
+
+.title {
+  margin: 20px 0;
+  color: #32cd32; /* Green color for title */
+}
+
+.main {
+  border: 8px solid #2c2c2c; /* Darker border */
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.name {
+  display: flex;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 8px 16px;
+  color: #32cd32; /* Green color for name */
+  background-color: #2c2c2c; /* Dark background for name section */
+}
+
+.name > span {
+  color: #bbb;
+}
+
+.name-input {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f5f5f5; /* Light text color */
+  flex-grow: 1;
+  border: none;
+  margin: 0px 12px;
+  outline: none;
+  background-color: #2c2c2c; /* Dark background */
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #3a3a3a; /* Darker background for messages */
+  width: 400px;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+
+.message-left,
+.message-right {
+  list-style: none;
+  padding: 8px 12px;
+  margin: 12px;
+  max-width: 250px;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.message-left {
+  border-radius: 20px 20px 20px 0px;
+  align-self: flex-start;
+  background-color: #4caf50; /* Green background for left messages */
+  color: #fff; /* White text for left messages */
+  box-shadow: -2px 2px 4px #1e1e1e; /* Darker shadow */
+}
+
+.message-right {
+  border-radius: 20px 20px 0px 20px;
+  align-self: flex-end;
+  background-color: #2d2d2d; /* Dark background for right messages */
+  box-shadow: 2px 2px 4px #1e1e1e; /* Darker shadow */
+  color: #f6f6f6; /* Light text for right messages */
+}
+
+.message-left > p > span,
+.message-right > p > span {
+  display: block;
+  font-style: italic;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #bbbbbb; /* Lighter gray for timestamps */
+}
+
+.feedback {
+  font-style: italic;
+  font-size: 14px;
+  padding: 0px 16px 16px 16px;
+  color: #32cd32; /* Green color for feedback */
+  text-align: center;
+}
+
+.message-form {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    background-color: #f0f0f0; /* Lighter background for message form */
+    border-radius: 0 0 24px 24px; /* Rounded corners at the bottom */
+    padding: 8px; /* Add some padding */
+  }
+  
+  .message-input {
+    flex-grow: 1;
+    height: 48px; /* Same height as send button */
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    background-color: #fff;
+    color: #2d2d2d; /* Darker text color for contrast */
+    border-radius: 16px; /* Rounded corners for input */
+  }
+
+  .send-button {
+    height: 48px; /* Same height as message input */
+    font-size: 16px;
+    border: none;
+    padding: 0px 20px;
+    outline: none;
+    background-color: #32cd32; /* Green background for send button */
+    color: #fff; /* White text for send button */
+    cursor: pointer;
+    border-radius: 16px; /* Rounded corners on the right side */
+    margin-left: 8px; /* Small space between input and button */
+  }
+  
+  .v-divider {
+    display: none; /* Hide the divider if it's not needed */
+  }
+
+.clients-total {
+  margin: 20px 0;
+  color: #32cd32; /* Green color for clients total */
+}
+/* Custom Scrollbar for WebKit Browsers (Chrome, Safari, etc.) */
+.message-container::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  .message-container::-webkit-scrollbar-track {
+    background: #2c2c2c; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+  }
+  
+  .message-container::-webkit-scrollbar-thumb {
+    background-color: #32cd32; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid #2c2c2c; /* Optional: adds space around the thumb */
+  }
+  
+  .message-container::-webkit-scrollbar-thumb:hover {
+    background-color: #28a428; /* Darker green when hovering */
+  }
+  
+  /* Custom Scrollbar for Firefox */
+  .message-container {
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: #32cd32 #2c2c2c; /* Thumb color and track color */
+  }
+  
+  /* Scrollbar Styling for IE and Edge */
+  .message-container {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Auto-hides the scrollbar */
+  }
+  
+  /* General scrollbar styling for other browsers (if supported) */
+  .message-container::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 10px; /* Rounded corners for horizontal scrollbars */
+  }
+  
