@@ -195,14 +195,16 @@
                     <i class="bi bi-search"></i>
                     <input type="text" placeholder="Search Music...">
                 </div>
-                <div class="user">
-                    <img src="https://audio11.blob.core.windows.net/images/logo.png" alt="User" title="Spotify (Chirag Nagar)">
-                    
+                <div class="user">                    
                     <div id="userProfileContainer">
-                    <div id="userProfile"></div>
-                    <button id="signOutButton">Sign Out</button>
+                        <div id="userProfile"></div>
+                                              
                 </div>
+                 
                 </div>
+                <div>                        <button id="signOutButton">Sign Out</button>
+                </div> 
+                
             </nav>
             <div class="content">
                 <h1>Alan Walker - Faded</h1>
@@ -430,10 +432,14 @@
     <script>
         function openForm() {
           document.getElementById("myForm").style.display = "block";
+          document.getElementById("userProfileContainer").style.display = "none";
+
         }
         
         function closeForm() {
           document.getElementById("myForm").style.display = "none";
+          document.getElementById("userProfileContainer").style.display = "block";
+
         }
         </script>
     <script src="player.js"></script>
@@ -464,8 +470,11 @@
             const profileDiv = document.getElementById('userProfile');
             profileDiv.innerHTML = `
                 <img src="${user.picture}" alt="Profile Picture">
-                <p>${user.name}</p>
             `;
+            // profileDiv.innerHTML = `
+            //     <img src="${user.picture}" alt="Profile Picture">
+            //     <p>${user.name}</p>
+            // `;
             const nameInput = document.getElementById('name-input');
             nameInput.value = user.name;
              // Set the profile picture in the <span> where the icon exists
